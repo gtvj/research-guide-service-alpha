@@ -14,3 +14,7 @@ Use these steps to get up and running
 6. Start the application with `flask run`
 7. See the command line for the URL to visit
 8. When finished run `deactivate` from the virtual environment
+
+## Running tests
+
+From the project root run `pytest` (within an activated python environment).
