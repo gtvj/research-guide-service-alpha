@@ -1,0 +1,64 @@
+{
+    "AB": {
+        "guides": {
+            "contaminated-land": "Contaminated land"
+        },
+        "records": {
+            "AB 11": {
+                "guides": {
+                    "photographs": "Photographs"
+                }
+            },
+            "AB 13": {
+                "guides": {
+                    "photographs": "Photographs"
+                }
+            },
+            "AB 18": {
+                "guides": {
+                    "photographs": "Photographs"
+                }
+            },
+            "AB 5": {
+                "guides": {
+                    "architectural-drawings": "Architectural drawings"
+                }
+            },
+            "AB 7": {
+                "guides": {
+                    "photographs": "Photographs"
+                }
+            }
+        }
+    },
+    "ACT": {
+        "records": {
+            "ACT 1": {
+                "records": {
+                    "ACT 1/104": {
+                        "guides": {
+                            "companies-and-businesses": "Companies and businesses"
+                        }
+                    },
+                    "ACT 1/632": {
+                        "guides": {
+                            "companies-and-businesses": "Companies and businesses"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ZSPC": {
+        "guides": {
+            "newspapers": "Newspapers"
+        },
+        "records": {
+            "ZSPC 11": {
+                "guides": {
+                    "photographs": "Photographs"
+                }
+            }
+        }
+    }
+}
