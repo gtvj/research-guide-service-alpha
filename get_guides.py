@@ -20,7 +20,19 @@ def get_guides_for_series(lettercode, series, guides):
             return guides[lettercode]["records"][series]
 
     return ''
-#
-# def get_guides_for_reference(reference, guides):
-#     if (reference and guides["records"][reference]):
-#         return guides["records"][reference]
+
+
+def get_guides_for_reference(lettercode, series, reference, guides):
+
+    lettercode_found = guides[lettercode] or False
+
+    if(lettercode_found):
+        series_found = guides[lettercode]["records"][series] or False
+
+        if(series_found):
+            reference_found = guides[lettercode]["records"][series] or False
+
+            if(reference_found):
+                return guides[lettercode]["records"][series]["records"][reference]
+
+    return ''

@@ -53,3 +53,15 @@ def test_get_guides_for_series():
     }
 
     assert result == expected
+
+
+def test_get_guides_for_reference():
+    result = get_guides_for_reference('ACT', 'ACT 1', 'ACT 1/632', guides)
+
+    expected = {
+        "guides": {
+            "companies-and-businesses": "Companies and businesses"
+        }
+    }
+
+    assert result == expected
