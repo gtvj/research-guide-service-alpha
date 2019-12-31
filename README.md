@@ -18,3 +18,11 @@ Use these steps to get up and running
 ## Running tests
 
 From the project root run `pytest` (within an activated python environment).
+
+## Trying it out
+
+Once running, you should be able to test this service by visiting `localhost:5000/guides/<catalogue reference>` (replacing `<catalogue reference>` with a catalogue reference Here are a couple of examples:
+
+* [ADM 1/24558](http://localhost:5000/guides/ADM%201/24558)
+* [HO](http://localhost:5000/guides/HO)
+* [PROB 1/4](http://localhost:5000/guides/PROB%201/4)
