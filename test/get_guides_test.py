@@ -1,6 +1,6 @@
 from get_guides import *
 
-with open('./app/data/references_in_guides_backlinked_deduped.json') as guides:
+with open('./app/data/references_in_guides_backlinked_deduped.min.json') as guides:
     guides = json.load(guides)
 
 
