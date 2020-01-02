@@ -26,3 +26,7 @@ Once running, you should be able to test this service by visiting `localhost:500
 * [ADM 1/24558](http://localhost:5000/guides/ADM%201/24558)
 * [HO](http://localhost:5000/guides/HO)
 * [PROB 1/4](http://localhost:5000/guides/PROB%201/4)
+
+## Decorated guides
+
+The `decorated_guides.json` has been adapted from `decorated_guides.js` in `https://github.com/gtvj/department-visualisation`. 
