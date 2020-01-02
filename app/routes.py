@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from get_fragments import *
 from get_guides import *
 from get_content_for_guides import *
 
@@ -7,6 +8,16 @@ from get_content_for_guides import *
 @app.route('/')
 def home():
     return render_template('home.html', title='Research guide service: Flask implementation')
+
+
+@app.route('/fragments/')
+def nothing_to_fragment():
+    return 'No reference provided'
+
+
+@app.route('/fragments/<path:ref>')
+def fragments(ref):
+    return get_fragments(ref)
 
 
 @app.route('/guides/')
