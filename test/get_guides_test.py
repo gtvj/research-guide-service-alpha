@@ -5,7 +5,7 @@ with open('./app/data/references_in_guides_backlinked_deduped.min.json') as guid
 
 
 def test_get_guides_for_letter_code():
-    result = get_guides_for_lettercode('AB', guides)
+    result = get_guides_for_lettercode('AB')
 
     expected = {
         "contaminated-land": "Contaminated land"
@@ -15,7 +15,7 @@ def test_get_guides_for_letter_code():
 
 
 def test_get_guides_for_series():
-    result = get_guides_for_series('AB', 'AB 11', guides)
+    result = get_guides_for_series('AB', 'AB 11')
 
     expected = {
         "photographs": "Photographs"
@@ -25,7 +25,7 @@ def test_get_guides_for_series():
 
 
 def test_get_guides_for_reference():
-    result = get_guides_for_reference('ACT', 'ACT 1', 'ACT 1/632', guides)
+    result = get_guides_for_reference('ACT', 'ACT 1', 'ACT 1/632')
 
     expected = {
         "companies-and-businesses": "Companies and businesses"
@@ -35,7 +35,7 @@ def test_get_guides_for_reference():
 
 
 def test_get_guides_series_and_lettercode():
-    result = get_guides('AB 5', guides)
+    result = get_guides('AB 5')
 
     expected = {
         "AB": {
@@ -50,7 +50,7 @@ def test_get_guides_series_and_lettercode():
 
 
 def test_get_guides_series_lettercode_and_reference():
-    result = get_guides('ADM 1/24558', guides)
+    result = get_guides('ADM 1/24558')
 
     expected = {
         "ADM": {
