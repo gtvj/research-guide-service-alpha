@@ -12,3 +12,12 @@ def get_content_for_guide(guide_identifier, content_of_guides):
             result = i
 
     return result
+
+def get_content_for_multiple_guides(guide_identifier_list):
+    result = []
+
+    for i in guide_identifier_list:
+        if get_content_for_guide(i, content_of_guides):
+            result.append(get_content_for_guide(i, content_of_guides))
+
+    return result
