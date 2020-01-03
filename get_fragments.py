@@ -57,5 +57,5 @@ def extract_fragments_from_standard_reference(reference = False):
     return {
         "letter_code": lettercode_match.group(1) if lettercode_match else "",
         "series": series_match.group(0) if series_match else "",
-        "reference": reference
+        "reference": reference if reference else ""
     }

@@ -78,14 +78,14 @@ def get_guides_for_reference(lettercode, series, reference):
     return ''
 
 
-def get_guides(reference):
+def get_guides(ref):
     """
     Gets guides for the lettercode, series and reference represented in the given argument
     :param reference: a document reference
     :return: a dict of results
     :rtype: dict
     """
-    fragments = get_fragments(reference)
+    fragments = get_fragments(ref)
 
     letter_code = fragments['letter_code']
     series = fragments['series']
@@ -93,10 +93,8 @@ def get_guides(reference):
 
     results = {
         reference: get_guides_for_reference(letter_code, series, reference),
+        series: get_guides_for_series(letter_code, series),
         letter_code: get_guides_for_lettercode(letter_code)
     }
-
-    if series:
-        results[series] = get_guides_for_series(letter_code, series)
 
     return results
