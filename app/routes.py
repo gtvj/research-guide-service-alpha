@@ -30,6 +30,11 @@ def related_guides(ref):
     return get_guides(ref)
 
 
+@app.route('/guides_content/')
+def no_content():
+    return 'No reference provided'
+
+
 @app.route('/guides_content/<path:ref>')
 def guide_content_for_reference(ref):
     guides = get_guides(ref)
