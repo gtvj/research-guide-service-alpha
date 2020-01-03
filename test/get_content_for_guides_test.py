@@ -1,12 +1,9 @@
 from get_content_for_guides import *
 import json
 
-with open('./app/data/decorated_guides.json') as content_of_guides:
-    content_of_guides = json.load(content_of_guides)
-
 
 def test_get_content_for_guide():
-    result = get_content_for_guide('british-army-officers-up-to-1913-further-research', content_of_guides)
+    result = get_content_for_guide('british-army-officers-up-to-1913-further-research')
 
     expected = {
         "guide_href": "http://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-army-officers-up-to-1913-further-research/",
@@ -103,7 +100,7 @@ def test_get_content_for_guide():
 
 
 def test_get_content_for_guide_which_does_not_exist():
-    result = get_content_for_guide('this-guide-is-nonexistent', content_of_guides)
+    result = get_content_for_guide('this-guide-is-nonexistent')
 
     expected = None
 

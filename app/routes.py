@@ -36,6 +36,6 @@ def guide_content_for_reference(ref):
 
     for fragment in guides:
         for i in guides[fragment]:
-            guides[fragment][i] = get_content_for_guide(i, content_of_guides)
+            guides[fragment][i] = get_content_for_guide(i)
 
     return guides
