@@ -27,6 +27,10 @@ Flask implementation of a service that returns information about related researc
 
 From the project root run `pytest -vv` (within an activated python environment).
 
+### Viewing the documentation for modules
+
+To see module documentation import the module and use the Python `help()` function. For example, `import get_guides` folloed by `help(get_guides)`
+
 ## Using the service
 
 ### Getting 'fragments' from a reference
@@ -103,7 +107,7 @@ Visiting `/guides_content/<reference>` will return an object that has content fr
 {
   "PROB": "", 
   "PROB 11": {
-    "wills-1384-1858": {
+    "wills-1384-1858": { 
       "bigrams": [
         [
           [
@@ -139,8 +143,9 @@ Visiting `/guides_content/<reference>` will return an object that has content fr
 }
 
 ```
+
 The fields within this object are obtained from `decorated_guides.json`, see below for more information.
 
-## Decorated guides
+### Decorated guides
 
 The `decorated_guides.json` has been adapted from `decorated_guides.js` in `https://github.com/gtvj/department-visualisation`. 

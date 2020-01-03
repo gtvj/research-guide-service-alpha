@@ -1,8 +1,18 @@
 from get_fragments import *
 import json
 
+"""
+This module gets the guides related to a given reference or reference fragment 
+"""
+
 
 def load_guide_data():
+    """
+    Loads guide data from JSON file and returns corresponding dict
+
+    :return: guides
+    :rtype: dict
+    """
     with open('app/data/references_in_guides_backlinked_deduped.min.json') as guides:
         guides = json.load(guides)
 
@@ -10,6 +20,15 @@ def load_guide_data():
 
 
 def get_guides_for_lettercode(lettercode):
+    """
+    Gets guides for a given letter code. If none, returns empty string
+
+    :param lettercode: a lettercode
+    :type lettercode: str
+    :return: guides if found, '' otherwise
+    :rtype: dict or str
+    """
+
     guides = load_guide_data()
 
     if lettercode:
@@ -20,6 +39,15 @@ def get_guides_for_lettercode(lettercode):
 
 
 def get_guides_for_series(lettercode, series):
+    """
+    Gets guides for a given series
+
+    :param lettercode: a lettercode
+    :param series: a series
+    :return: guides related to a given series, otherwise ''
+    :rtype: dict or str
+    """
+
     guides = load_guide_data()
 
     if lettercode in guides:
@@ -30,6 +58,14 @@ def get_guides_for_series(lettercode, series):
 
 
 def get_guides_for_reference(lettercode, series, reference):
+    """
+    Gets guides for a given reference
+    :param lettercode: a lettercode
+    :param series: a series
+    :param reference: a reference
+    :return: guides related to a given reference, otherwise ''
+    :rtype: dict or str
+    """
     guides = load_guide_data()
 
     if lettercode in guides:
@@ -43,6 +79,12 @@ def get_guides_for_reference(lettercode, series, reference):
 
 
 def get_guides(reference):
+    """
+    Gets guides for the lettercode, series and reference represented in the given argument
+    :param reference: a document reference
+    :return: a dict of results
+    :rtype: dict
+    """
     fragments = get_fragments(reference)
 
     letter_code = fragments['letter_code']
