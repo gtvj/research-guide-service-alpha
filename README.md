@@ -4,7 +4,7 @@ Flask implementation of a service that returns information about related researc
 
 ## Development machine configuration
 
-Use these steps to get up and running
+### Initial setup
 
 1. Ensure you have Python 3.7 and pip installed
 2. Clone this repository
@@ -15,11 +15,19 @@ Use these steps to get up and running
 7. See the command line for the URL to visit
 8. When finished run `deactivate` from the virtual environment
 
-## Running tests
+### Daily use
+
+1. From the root directory run `source venv/bin/activate` 
+2. Install dependencies with `pip install -r requirements.txt`
+3. Start the application with `flask run`
+4. See the command line for the URL to visit
+5. When finished run `deactivate` from the virtual environment
+
+### Running tests
 
 From the project root run `pytest -vv` (within an activated python environment).
 
-## Trying it out
+## Using the service
 
 ### Getting 'fragments' from a reference
 
