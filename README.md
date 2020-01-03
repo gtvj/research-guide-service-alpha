@@ -25,7 +25,7 @@ Flask implementation of a service that returns information about related researc
 
 ### Running tests
 
-From the project root run `pytest -vv` (within an activated python environment).
+Install Pytest (`pip install -U pytest`) and run `pytest -vv` from the project root (within an activated python environment)
 
 ### Viewing the documentation for modules
 
