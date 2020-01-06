@@ -33,6 +33,10 @@ To see module documentation import the module and use the Python `help()` functi
 
 ## Using the service
 
+### In-browser endpoint playground
+
+Visiting the root of the server (as shown when running Flask above) will present an explanatory HTML page and form that allow you to interact with each of the endpoints using a form. 
+
 ### Getting 'fragments' from a reference
 
 Visiting `/fragments/<reference>` will return an object corresponding to the 'fragments' for a reference. These are 'reference', 'series' and 'lettercode'. For example: `http://localhost:5000/fragments/ADM%201/24558` returns
