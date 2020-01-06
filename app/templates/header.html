@@ -1,0 +1,17 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/static/images/tna.jpeg" class="img-fluid logo">
+            </div>
+            <div class="col-md-6">
+                <nav class="theme-nav">
+                    <ul>
+                        <li class="{{ 'current' if request.path == '/' else '' }}"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li class="{{ 'current' if request.path == '/service_playground/' else '' }}"><a href="{{ url_for('service_playground') }}">Service endpoint playground</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col">
+        <div class="tna-color--pink no-reference">
+            <p>It looks like you've landed at <strong><code>{{ endpoint }}</code></strong> without having
+                provided
+                a catalogue
+                reference. The correct format is <strong><code>{{ endpoint }}{catalogue reference}</code></strong>.
+            </p>
+            <p>For example <strong><code>{{ endpoint }}PROB 11</code></strong></p>
+            All endpoints need a catalogue reference. You can use the service endpoint playground to experiment
+            with requests
+            </p>
+            <p>
+                <a href="{{ url_for('service_playground') }}" class="tna-button" role="button">Try the service endpoint
+                    playground</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
