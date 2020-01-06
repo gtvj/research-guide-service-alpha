@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<p>Enter a catalogue reference below to experiment with endpoints for this service.</p>
+<form class="tna-form" action="{{ url_for('service_playground')}}" method="post" autocomplete="off">
+    <div class="tna-form__row">
+        <label for="catalogue_reference">Catalogue reference</label>
+        <input type="text" name="catalogue_reference" id="catalogue_reference" placeholder="ADM 1/24558"
+               required="required">
+    </div>
+    <p>I'd like to see:</p>
+    <div class="tna-form__row tna-form__radio">
+        <input type="radio" id="fragments" name="endpoint_type" value="fragments" checked="checked">
+        <label for="fragments">Fragments</label>
+    </div>
+    <div class="tna-form__row tna-form__radio">
+        <input type="radio" id="related_guides" name="endpoint_type" value="guides">
+        <label for="related_guides">A list of related guides</label>
+    </div>
+    <div class="tna-form__row tna-form__radio">
+        <input type="radio" id="related_guide_content" name="endpoint_type" value="guides_content">
+        <label for="related_guide_content">ML generated content for related guides</label>
+    </div>
+    <input type="submit" name="submit" value="Go" class="tna-button">
+</form>
+{% endblock %}
