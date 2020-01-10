@@ -5619,4 +5619,13 @@ pre {
     margin-bottom: 1em;
 }
 
+label[for=catalogue_reference] span {
+    color: #777;
+    font-style: italic;
+}
+
+label[for=catalogue_reference] span::before {
+    content: ' - '
+}
+
 /*# sourceMappingURL=tna.css.map */
