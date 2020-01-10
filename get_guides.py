@@ -31,11 +31,12 @@ def get_guides_for_lettercode(lettercode):
 
     guides = load_guide_data()
 
-    if lettercode:
-        if lettercode in guides:
-            if 'guides' in guides[lettercode]:
-                return guides[lettercode]['guides']
-    return ''
+    try:
+        result = guides[lettercode]['guides']
+    except KeyError:
+        result = ''
+
+    return result
 
 
 def get_guides_for_series(lettercode, series):
@@ -50,11 +51,12 @@ def get_guides_for_series(lettercode, series):
 
     guides = load_guide_data()
 
-    if lettercode in guides:
-        if series in guides[lettercode]['records']:
-            if 'guides' in guides[lettercode]['records'][series]:
-                return guides[lettercode]['records'][series]['guides']
-    return ''
+    try:
+        result = guides[lettercode]['records'][series]['guides']
+    except KeyError:
+        result = ''
+
+    return result
 
 
 def get_guides_for_reference(lettercode, series, reference):
@@ -68,14 +70,13 @@ def get_guides_for_reference(lettercode, series, reference):
     """
     guides = load_guide_data()
 
-    if lettercode in guides:
-        if series in guides[lettercode]['records']:
-            if 'records' in guides[lettercode]['records'][series]:
-                if reference in guides[lettercode]['records'][series]['records']:
-                    if 'guides' in guides[lettercode]['records'][series]['records'][reference]:
-                        return guides[lettercode]['records'][series]['records'][reference]['guides']
+    try:
+        result = guides[lettercode]['records'][series]['records'][reference]['guides']
+    except KeyError:
+        print('KeyError in get_guides')
+        result = ''
 
-    return ''
+    return result
 
 
 def get_guides(ref):
